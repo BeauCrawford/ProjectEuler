@@ -1,6 +1,4 @@
-﻿using System;
-
-namespace ProjectEuler
+﻿namespace ProjectEuler
 {
     public class Problem0001 : Problem
     {
@@ -20,7 +18,7 @@ namespace ProjectEuler
                 }
             }
 
-            Console.WriteLine(sum);
+            Require(233168, sum);
         }
     }
 }

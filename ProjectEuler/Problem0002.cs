@@ -1,5 +1,4 @@
-﻿using System;
-using System.Linq;
+﻿using System.Linq;
 
 namespace ProjectEuler
 {
@@ -18,7 +17,7 @@ namespace ProjectEuler
 
             var total = MathHelper.Fibonacci(maxValue: 4000000).Where(e => e % 2 == 0).CalculateSum();
 
-            Console.WriteLine(total);
+            Require((ulong)8745216, total);
         }
     }
 }

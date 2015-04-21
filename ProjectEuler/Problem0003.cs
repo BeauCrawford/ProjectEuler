@@ -1,5 +1,4 @@
-﻿using System;
-using System.Linq;
+﻿using System.Linq;
 
 namespace ProjectEuler
 {
@@ -13,7 +12,7 @@ namespace ProjectEuler
 
             var max = MathHelper.FindFactors(600851475143).Where(f => MathHelper.IsPrime(f)).Max();
 
-            Console.WriteLine(max);
+            Require((long)6857, max);
         }
     }
 }

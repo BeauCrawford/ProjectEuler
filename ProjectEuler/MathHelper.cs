@@ -5,6 +5,30 @@ namespace ProjectEuler
 {
     public static class MathHelper
     {
+        public static bool IsPalidrome(int number)
+        {
+            if (number < 0)
+                return false;
+
+            var chars = number.ToString().ToCharArray();
+
+            if (chars.Length == 1)
+                return true;
+
+            int matchCount = 0;
+
+            for (int i = 0; i < chars.Length / 2; i++)
+            {
+                var other = chars.Length - 1 - i;
+
+                if (chars[i] == chars[other])
+                    matchCount++;
+                    
+            }
+
+            return matchCount == chars.Length / 2;
+        }
+
         public static bool IsMultipleOf(int x, int n)
         {
             return (x % n) == 0;

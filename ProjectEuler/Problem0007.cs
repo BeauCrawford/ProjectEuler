@@ -1,6 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
+﻿using System.Collections.Generic;
 
 namespace ProjectEuler
 {
@@ -25,10 +23,6 @@ namespace ProjectEuler
                         break;
                 }
             }
-
-            Console.WriteLine("COUNT: " + results.Count);
-
-            Console.WriteLine(results.Last());
         }
     }
 }

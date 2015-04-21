@@ -1,5 +1,4 @@
-﻿using System;
-using System.Numerics;
+﻿using System.Numerics;
 
 namespace ProjectEuler
 {
@@ -9,6 +8,7 @@ namespace ProjectEuler
         {
             // Result: 90,216
 
+            var current = new BigInteger(0);
             var previous2 = new BigInteger(1);
             var previous1 = new BigInteger(1);
 
@@ -16,18 +16,19 @@ namespace ProjectEuler
 
             while (true)
             {
-                var current = previous1 + previous2;
+                current = previous1 + previous2;
                 previous2 = previous1;
                 previous1 = current;
 
                 if (current.ToString().Length >= 1000)
                 {
-                    Console.WriteLine(counter + ": " + current);
                     break;
                 }
 
                 counter++;
             }
+
+            Require(4782, counter);
         }
     }
 }
